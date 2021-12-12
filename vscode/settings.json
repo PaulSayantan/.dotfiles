@@ -1,0 +1,63 @@
+{
+    "editor.suggestSelection": "first",
+    "editor.formatOnSave": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.fontFamily": "'MonoLisa', Consolas, 'Courier New', monospace",
+    "editor.fontWeight": "300",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Pitch Black",
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.fontSize": 21,
+    "terminal.integrated.fontWeight": "400",
+    "terminal.integrated.fontWeightBold": "normal",
+    "editor.fontSize": 17,
+    "editor.autoClosingQuotes": "always",
+    "javascript.preferences.quoteStyle": "single",
+    "prettier.singleQuote": true,
+    "prettier.endOfLine": "lf",
+    "prettier.jsxSingleQuote": true,
+    "prettier.semi": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "[javascript]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[java]": {
+        "editor.fontSize": 24,
+    },
+    "[python]":{
+        "editor.wordBasedSuggestions": false,
+        "editor.fontSize": 22,
+    },
+    "[go]": {
+        "editor.fontSize": 24,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.minimap.enabled": false,
+    "git.autofetch": true,
+    "notebook.cellFocusIndicator": "border",
+    "window.menuBarVisibility": "hidden",
+    "workbench.activityBar.visible": false,
+    "git.enableCommitSigning": true,
+    "git.suggestSmartCommit": false,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": true
+}

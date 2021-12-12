@@ -1,0 +1,147 @@
+# prompt format
+format = """
+$custom\
+$username\
+$hostname\
+$shlvl\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$fill\
+$status\
+$java\
+$docker_context\
+$golang\
+$nodejs\
+$python\
+$aws\
+$env_var\
+$memory_usage\
+$battery\
+$time\
+$line_break\
+$shell\
+$character"""
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+command_timeout = 2000
+
+# Inserts  blank line between shell prompts
+add_newline = true
+
+[fill]
+symbol = " "
+
+[battery]
+full_symbol = "   "
+charging_symbol = "   "
+
+[[battery.display]]
+threshold = 10
+style = "bold fg:160"
+discharging_symbol = "   "
+
+[[battery.display]]
+threshold = 20
+style = "bold fg:196"
+discharging_symbol = "   "
+
+[[battery.display]]
+threshold = 30
+style = "bold fg:202"
+discharging_symbol = "   "
+
+[[battery.display]]
+threshold = 40
+style = "bold fg:214"
+discharging_symbol = "   "
+
+[[battery.display]]
+threshold = 50
+style = "bold fg:227"
+discharging_symbol = "   "
+
+[[battery.display]]
+threshold = 60
+style = "bold fg:184"
+discharging_symbol = "   "
+
+[[battery.display]]
+threshold = 70
+style = "bold fg:148"
+discharging_symbol = "   "
+
+[[battery.display]]
+threshold = 80
+style = "bold fg:118"
+discharging_symbol = "   "
+
+[[battery.display]]
+threshold = 90
+style = "bold fg:82"
+discharging_symbol = "   "
+
+[[battery.display]]
+threshold = 100
+style = "bold fg:47"
+discharging_symbol = "   "
+
+# os icon
+[custom.os-icon]
+disabled = false
+command = "os-icon"
+format = "[$symbol ($output  )]($style)"
+symbol = " [漢](bold fg:202)"
+when = "true"
+shell = ["bash", "--noprofile", "--norc"]
+
+# memory usage
+[memory_usage]
+symbol = "[ ](bold fg:121)"
+style= "fg:121"
+format = "$symbol [${ram}]($style) "
+threshold = -1
+disabled = false
+
+# username
+[username]
+style_user = "fg:118"
+style_root = "bold fg:231"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+# directory
+[directory]
+read_only = " "
+style = "bold fg:99"
+truncation_length = 1
+truncate_to_repo = true
+truncation_symbol = "in  "
+disabled = false
+
+# Replace the "❯" symbol in the prompt with ""
+[character]
+error_symbol = "[  ](bold red)"
+success_symbol = "[  ](bold green)"     # The "success_symbol" segment is being set to "" with the color "bold green"
+
+[time]
+disabled = false
+style =	"dimmed fg:51"
+format = '   [$time]($style)'
+time_format = "%r"
+use_12hr = true
+
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+
+
+[python]
+symbol = "[ ](bold fg:31)"
